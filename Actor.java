@@ -20,9 +20,11 @@ public class Actor {
 	public Integer getAge() {
 		return age;
 	}
+
 	public String getLanguage() {
 		return language;
 	}
+
 	public String getName() {
 		return name;
 	}

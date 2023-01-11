@@ -25,7 +25,7 @@ public class Runners {
 			System.out.println(rocket.getName());
 			System.out.println(rocket.getPrice());
 
-			Rocket rocket2 = container.getBean("spaceRocket", Rocket.class);
+			Rocket rocket2 = container.getBean("getrocket", Rocket.class);
 			System.out.println(rocket2);
 			System.out.println(rocket2.getCountry());
 			System.out.println(rocket2.getName());
@@ -43,17 +43,17 @@ public class Runners {
 			System.out.println(actor2.getLanguage());
 			System.out.println(actor2.getAge());
 
-			Season refOfSeason = container.getBean("season",Season.class);
-			System.out.println(refOfSeason);
-			System.out.println(refOfSeason.getName());
-			System.out.println(refOfSeason.getDuration());
-			System.out.println(refOfSeason.getStartingMonth());
+			Season season = container.getBean("season",Season.class);
+			System.out.println(season);
+			System.out.println(season.getName());
+			System.out.println(season.getDuration());
+			System.out.println(season.getStartingMonth());
 
-			Season refOfSeason1 = container.getBean("season", Season.class);
-			System.out.println(refOfSeason1);
-			System.out.println(refOfSeason1.getName());
-			System.out.println(refOfSeason1.getDuration());
-			System.out.println(refOfSeason1.getStartingMonth());
+			Season season2 = container.getBean("seasons", Season.class);
+			System.out.println(season2);
+			System.out.println(season2.getName());
+			System.out.println(season2.getDuration());
+			System.out.println(season2.getStartingMonth());
 		}
 
 	}

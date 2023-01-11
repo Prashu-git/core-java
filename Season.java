@@ -1,43 +1,44 @@
 package com.springValue.app.component;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-public class Season {	
-	
-		private String name;
-		private String duration;
-		private String startingMonth;
+@Component
+public class Season {
 
-		public Season() {
-			System.out.println("Creating Season using default const by Spring");
-		}
+	private String name;
+	private String duration;
+	private String startingMonth;
 
-		@Value("Winter")
-		public void setName(String name) {
-			this.name = name;
-		}
+	public Season() {
+		System.out.println("Creating Season using default const by Spring");
+	}
 
-		@Value("Nov to Feb")
-		public void setDuration(String duration) {
-			this.duration = duration;
-		}
+	public String getName() {
+		return name;
+	}
 
-		@Value("November")
-		public void setStartingMonth(String startingMonth) {
-			this.startingMonth = startingMonth;
-		}
+	public String getDuration() {
+		return duration;
+	}
 
-		public String getName() {
-			return name;
-		}
+	public String getStartingMonth() {
+		return startingMonth;
+	}
 
-		public String getDuration() {
-			return duration;
-		}
+	@Value("Winter")
+	public void setName(String name) {
+		this.name = name;
+	}
 
-		public String getStartingMonth() {
-			return startingMonth;
-		}
+	@Value("Nov to Feb")
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+
+	@Value("November")
+	public void setStartingMonth(String startingMonth) {
+		this.startingMonth = startingMonth;
 	}
 
 }
